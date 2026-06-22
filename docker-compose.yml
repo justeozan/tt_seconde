@@ -1,0 +1,18 @@
+
+
+services:
+  frontend:
+    build: app #with react
+    ports: 
+      - 5175:5175
+    
+  # back: 
+  #   build: backend #with Nest ?
+  #   ports: 
+  #     - 8080:8080
+  
+  # db:
+  #   build: database
+  #   ports:
+  #     - 3200:3200
+
