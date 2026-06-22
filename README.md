@@ -2,8 +2,13 @@ Test technique pour seconde
 
 sans IA: docker - nest - react - prisma - pstgSQL - 
 
+tt_seconde/
+    app/
+    back/
+    dc.yml
+    .env
+    Rm.md
 
-je pars sur 3 image, pour separer front back et data
 
 ---
 partie front
@@ -33,10 +38,10 @@ puis ajout de prisma a la mano :
 ```
 npm install prisma --save-dev
 npx prisma init
-
-npm install @prisma/client
+npm install @prisma/client @prisma/adapter-pg pg
 ```
 
 
 source :
-https://notiz.dev/blog/how-to-connect-nestjs-with-prisma
+- https://notiz.dev/blog/how-to-connect-nestjs-with-prisma
+- https://medium.com/@abhijariwala/dockerizing-a-next-js-and-node-js-app-with-postgresql-and-prisma-a-complete-guide-000527023e99
