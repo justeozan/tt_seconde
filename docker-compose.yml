@@ -1,18 +1,17 @@
-
-
 services:
   frontend:
     build: app #with react
-    ports: 
+    container_name: frontend
+    ports:
       - 5175:5175
-    
-  # back: 
-  #   build: backend #with Nest ?
-  #   ports: 
-  #     - 8080:8080
-  
-  # db:
-  #   build: database
+
+  backend: 
+    build: back #with Nest ?
+    container_name: backend
+    ports:
+      - 8080:8080
+
+  # database:
+  #   build: db
   #   ports:
   #     - 3200:3200
-
