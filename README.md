@@ -45,6 +45,10 @@ Puis pour initialiser la db :
 npx prisma migrate dev --name init
 npx prisma generate
 
+---
+avec nest cli on peut utiliser des commandes pour simplifier lecriture du CRUD et du controller :
+nest g controller [nom], ici short-url
+
 
 
 source :
