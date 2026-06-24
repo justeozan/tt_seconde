@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -7,7 +7,16 @@ import './App.css'
 
 function App() {
   
+// declencher la fonction
+  async function addUrl(url:String) {
+    //generer un string
+    const [longUrl] = String;
 
+
+    const handleShortUrl = async () => {
+        const res = await fetch("http://localhost:8080/")
+    }
+  }
 
 
   return (
@@ -24,7 +33,10 @@ function App() {
             Put your URL here :
           </p>
         </div>
-        <input id='url_input' placeholder='Url' type='text' className='bg-neutral-secondary-medium border' required />
+        <form action="addUrl()">
+
+          <input id='url_input' placeholder='Url' type='text' className='bg-neutral-secondary-medium border' onSubmit={addUrl()} required />
+        </form>
       </section>
     </>
   )

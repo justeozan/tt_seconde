@@ -41,7 +41,13 @@ npx prisma init
 npm install @prisma/client @prisma/adapter-pg pg
 ```
 
+Puis pour initialiser la db :
+npx prisma migrate dev --name init
+npx prisma generate
+
+
 
 source :
 - https://notiz.dev/blog/how-to-connect-nestjs-with-prisma
 - https://medium.com/@abhijariwala/dockerizing-a-next-js-and-node-js-app-with-postgresql-and-prisma-a-complete-guide-000527023e99
+- https://www.prisma.io/docs/guides/frameworks/nestjs
