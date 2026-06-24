@@ -47,7 +47,8 @@ npx prisma generate
 
 ---
 avec nest cli on peut utiliser des commandes pour simplifier lecriture du CRUD et du controller :
-nest g controller [nom], ici short-url
+nest g controller [nom], ici short-url.
+pour le CRUD en entier : nest g resource short-url
 
 
 
