@@ -50,6 +50,13 @@ avec nest cli on peut utiliser des commandes pour simplifier lecriture du CRUD e
 nest g controller [nom], ici short-url.
 pour le CRUD en entier : nest g resource short-url
 
+---
+je me suis servi de claude pour fix un bug, que je comprenais mal : 
+Prisma 7's prisma-client generator lisait tsconfig.json:module: "nodenext" et déduisait à tort que le projet était en ESM, générant du code source ESM (import.meta.url, import/export) incompatible avec le reste du projet CommonJS. Node chargeait ce fichier .js compilé en contexte CommonJS et plantait (ReferenceError: exports is not defined in ES module scope).
+
+Honnêtement je sais pas comment j'aurais fait sans...
+
+
 
 
 source :
