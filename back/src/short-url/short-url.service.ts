@@ -1,11 +1,23 @@
 import { Injectable } from '@nestjs/common';
 import { CreateShortUrlDto } from './dto/create-short-url.dto';
 import { UpdateShortUrlDto } from './dto/update-short-url.dto';
+import { PrismaService } from 'src/prisma.service';
+import { listURL } from 'src/generated/prisma/client';
+import { Prisma } from 'src/generated/prisma/client';
 
 @Injectable()
 export class ShortUrlService {
-  create(createShortUrlDto: CreateShortUrlDto) {
-    return 'This action adds a new shortUrl';
+
+  constructor(private prisma: PrismaService) {}
+
+  async create(longUrl: string): Promise<listURL> {
+    let data: Prisma.listURLCreateInput = {
+      long_url: longUrl,
+      short_url: ""
+    }
+    console.log("longURL: "+longUrl)
+
+    return this.prisma.listURL.create({ data })
   }
 
   findAll() {
